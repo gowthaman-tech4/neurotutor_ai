@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# SQLite config
+*.sqlite3
+*.db
+
+# Env variables
+.env
+
+# Logs and tests
+*.log
+backend/test_err*.txt
+backend/api.log
+backend/test_err_final.txt
+backend/alembic_err.txt
+
+# Node
+node_modules/
+.next/
+out/
+build/
+.DS_Store
