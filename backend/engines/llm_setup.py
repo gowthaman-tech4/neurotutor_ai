@@ -4,8 +4,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 
-# Force load specifically from backend/.env
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
+# Force load specifically from backend/.env and override cached vars
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'), override=True)
 
 def get_llm():
     # Integrate Google Gemini Pro for high-reasoning tasks

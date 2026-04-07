@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0d17;
-  --foreground: #e8eaf6;
-  --surface: #141829;
-  --surface-hover: #1c2040;
-  --accent: #7c3aed;
-  --accent-light: #a78bfa;
-  --accent-glow: rgba(124, 58, 237, 0.3);
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --surface: #f8fafc;
+  --surface-hover: #f1f5f9;
+  --accent: #064e3b;
+  --accent-light: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.3);
   --success: #34d399;
-  --warning: #fbbf24;
-  --danger: #f87171;
-  --muted: #6b7280;
-  --border: rgba(255, 255, 255, 0.08);
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --muted: #64748b;
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 @theme inline {
@@ -38,15 +38,16 @@ body {
 
 /* Glassmorphism card */
 .glass-card {
-  background: rgba(20, 24, 41, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 /* Glow effect */
 .glow {
-  box-shadow: 0 0 20px var(--accent-glow), 0 0 60px rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 20px var(--accent-glow), 0 0 60px rgba(16, 185, 129, 0.1);
 }
 
 /* Smooth transitions */
@@ -56,21 +57,49 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-light), var(--accent), #c084fc);
+  background: linear-gradient(135deg, var(--accent-light), var(--accent), #059669);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* Mastery tier colors */
-.tier-beginner { color: #94a3b8; }
-.tier-learning { color: #60a5fa; }
-.tier-improving { color: #fbbf24; }
-.tier-strong { color: #34d399; }
-.tier-mastered { color: #c084fc; }
+.tier-beginner {
+  color: #64748b;
+}
 
-.tier-bg-beginner { background: rgba(148, 163, 184, 0.15); }
-.tier-bg-learning { background: rgba(96, 165, 250, 0.15); }
-.tier-bg-improving { background: rgba(251, 191, 36, 0.15); }
-.tier-bg-strong { background: rgba(52, 211, 153, 0.15); }
-.tier-bg-mastered { background: rgba(192, 132, 252, 0.15); }
+.tier-learning {
+  color: #3b82f6;
+}
+
+.tier-improving {
+  color: #f59e0b;
+}
+
+.tier-strong {
+  color: #10b981;
+}
+
+.tier-mastered {
+  color: #059669;
+}
+
+.tier-bg-beginner {
+  background: rgba(100, 116, 139, 0.1);
+}
+
+.tier-bg-learning {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.tier-bg-improving {
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.tier-bg-strong {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.tier-bg-mastered {
+  background: rgba(5, 150, 105, 0.15);
+}

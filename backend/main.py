@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-from backend.database.database import get_db
+from database.database import get_db
 from sqlalchemy import text
 
 app = FastAPI(
@@ -14,7 +14,7 @@ app = FastAPI(
 # CORS — allow Next.js frontend on port 3000
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -27,10 +27,10 @@ class TaskRequest(BaseModel):
     learning_pattern: dict
     task_input: dict
 
-from backend.engines.router import get_engine_response
+from engines.router import get_engine_response
 
 @app.post("/api/engine/route")
-async def route_task(request: TaskRequest, db: Session = Depends(get_db)):
+def route_task(request: TaskRequest, db: Session = Depends(get_db)):
     """Core Intelligence Router: Parses task_type and routes to specific engines."""
     response_data = get_engine_response(request.model_dump(), db)
     return {"status": "success", "routed_engine": request.task_type, "output": response_data}

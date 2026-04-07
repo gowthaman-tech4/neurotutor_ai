@@ -19,7 +19,7 @@ Scoring Factors:
 
 from sqlalchemy.orm import Session
 from uuid import UUID
-from backend.database.models import MasteryRecord, LearningProfile, InteractionLog
+from database.models import MasteryRecord, LearningProfile, InteractionLog
 import traceback
 
 

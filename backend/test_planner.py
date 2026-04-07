@@ -1,6 +1,6 @@
-from backend.database.database import SessionLocal
-from backend.database.models import User
-from backend.engines.router import get_engine_response
+from database.database import SessionLocal
+from database.models import User
+from engines.router import get_engine_response
 import json
 
 def test_planner_engine():

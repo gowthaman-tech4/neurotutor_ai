@@ -13,7 +13,7 @@ Two entry points:
 
 from sqlalchemy.orm import Session
 from uuid import UUID
-from backend.database.models import LearningProfile, InteractionLog, MasteryRecord
+from database.models import LearningProfile, InteractionLog, MasteryRecord
 import json
 import datetime
 

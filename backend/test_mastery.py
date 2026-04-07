@@ -1,6 +1,6 @@
-from backend.database.database import SessionLocal
-from backend.database.models import User, Topic, MasteryRecord, LearningProfile
-from backend.engines.router import get_engine_response
+from database.database import SessionLocal
+from database.models import User, Topic, MasteryRecord, LearningProfile
+from engines.router import get_engine_response
 import json
 import os
 from dotenv import load_dotenv

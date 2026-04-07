@@ -24,7 +24,7 @@ from .thought_analyze import analyze_thought_pattern, extract_cognitive_features
 from .exam_config import get_exam_config, get_all_exam_options, get_priority_topics
 from .exam_adapt import adapt_for_exam
 from .integrity_guard import check_integrity
-from backend.database.models import InteractionLog
+from database.models import InteractionLog
 from sqlalchemy.orm import Session
 from uuid import UUID
 import traceback

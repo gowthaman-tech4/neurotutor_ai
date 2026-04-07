@@ -13,7 +13,7 @@ Strategies:
 
 from .llm_setup import get_llm, build_system_context_prompt
 from langchain_core.messages import SystemMessage, HumanMessage
-from backend.database.models import MasteryRecord, Topic, LearningProfile
+from database.models import MasteryRecord, Topic, LearningProfile
 from sqlalchemy.orm import Session
 from uuid import UUID
 import datetime

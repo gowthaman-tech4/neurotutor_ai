@@ -1,5 +1,5 @@
-from backend.database.database import SessionLocal, engine
-from backend.database.models import Base, User, LearningProfile, Topic, MasteryRecord
+from database.database import SessionLocal, engine
+from database.models import Base, User, LearningProfile, Topic, MasteryRecord
 from uuid import uuid4
 
 def seed_db():
